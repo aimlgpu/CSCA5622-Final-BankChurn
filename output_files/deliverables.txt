@@ -1,0 +1,3 @@
+Notebook: Combine all steps into Bank_Churn_Prediction_Final.ipynb
+Video: Record 10-min pitch with visuals
+GitHub: Create public repo with notebook, visuals, README
