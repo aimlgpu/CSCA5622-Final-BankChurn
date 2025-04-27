@@ -11,7 +11,7 @@ This repository contains the final project for CSCA 5622, focusing on predicting
 - **Citation**: Meshram, S. (2023). Bank Customer Churn Prediction [Data set]. Kaggle.
 
 ### Project Structure
-- **Notebook**: [Bank_Churn_Prediction_Final.ipynb](5622-Final-BankCustomerChurn.ipynb) – Contains all steps: problem definition, EDA, preprocessing, model training, results, and conclusion.
+- **Notebook**: [Bank_Churn_Prediction_Final.ipynb](Bank_Churn_Prediction_Final.ipynb) – Contains all steps: problem definition, EDA, preprocessing, model training, results, and conclusion.
 - **Output Files** (in `output_files/`):
   - **Plots**:
     - [Numeric Distributions](output_files/numeric_distributions.png) (Step 3b)
