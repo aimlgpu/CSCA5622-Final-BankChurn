@@ -7,7 +7,7 @@
 This repository contains the final project for CSCA 5622, focusing on predicting bank customer churn using supervised learning models. The project develops and compares four models—Logistic Regression, Random Forest, Neural Network, and CatBoost—to identify at-risk customers, emphasizing performance and interpretability.
 
 ### Dataset
-- **Source**: [Kaggle Bank Customer Churn Prediction Dataset](https://www.kaggle.com/datasets/shubhammeshram5797/bank-customer-churn-prediction)
+- **Source**: [Kaggle Bank Customer Churn Prediction Dataset]([https://www.kaggle.com/datasets/shubhammeshram5797/bank-customer-churn-prediction](https://www.kaggle.com/datasets/shubhammeshram579/bank-customer-churn-prediction))
 - **Citation**: Meshram, S. (2023). Bank Customer Churn Prediction [Data set]. Kaggle.
 
 ### Project Structure
