@@ -1,44 +1,40 @@
-# CSCA5622-Final-BankChurn
+# Assignment: CSCA 5622 Supervised Learning Final Project
 
-# Bank Customer Churn Prediction
+# Introduction: Bank Customer Churn Prediction Using Supervised Learning
 
-## CSCA 5622 Supervised Learning Final Project
+## Project Overview
 
-This repository contains the final project for CSCA 5622, focusing on predicting bank customer churn using supervised learning models. The project develops and compares four models—Logistic Regression, Random Forest, Neural Network, and CatBoost—to identify at-risk customers, emphasizing performance and interpretability.
+### Problem Statement
+This project focuses on predicting bank customer churn, a critical challenge for financial institutions aiming to retain their client base. The task is to determine whether a customer will churn (close their account), which is a **binary classification problem**. The type of learning employed is **supervised learning**, where we use labeled data (Exited: 0 = No Churn, 1 = Churn) to train models that predict churn likelihood based on customer features.
 
-### Dataset
-- **Source**: [Kaggle Bank Customer Churn Prediction Dataset](https://www.kaggle.com/datasets/shubhammeshram579/bank-customer-churn-prediction)
-- **Citation**: Meshram, S. (2023). Bank Customer Churn Prediction [Data set]. Kaggle.
+### Importance and Goal
+Customer churn prediction is vital for banks like HSBC or JPMorgan, as retaining high-value clients can save between 10M to 500M annually by 2025 (estimated based on industry retention costs). The **goal** of this project is to develop and compare supervised learning models—Logistic Regression, Random Forest, Neural Network, and CatBoost—to accurately identify at-risk customers. By focusing on both performance (e.g., ROC-AUC, F1-score) and interpretability (e.g., SHAP analysis), the project aims to provide actionable insights for financial applications, such as targeted retention campaigns. Additionally, this project explores advanced techniques like GPU-accelerated training and SHAP for interpretability, enhancing my skills in model development and analysis.
 
-### Project Structure
-- **Notebook**: [Bank_Churn_Prediction_Final.ipynb](Bank_Churn_Prediction_Final.ipynb) – Contains all steps: problem definition, EDA, preprocessing, model training, results, and conclusion.
-- **Output Files** (in `output_files/`):
-  - **Plots**:
-    - [Numeric Distributions](output_files/numeric_distributions.png) (Step 3b)
-    - [Age vs. Churn](output_files/age_vs_churn.png) (Step 3c)
-    - [Churn by Geography](output_files/churn_geography.png) (Step 3c)
-    - [Correlation Matrix](output_files/correlation_matrix.png) (Step 3c)
-    - [Random Forest Feature Importance](output_files/feature_importance_rf.png) (Step 4a)
-    - [Neural Network Training History](output_files/nn_training_history.png) (Step 4b)
-    - [SHAP Summary](output_files/shap_summary.png) (Step 4c)
-    - [ROC Curve Comparison](output_files/roc_curve.png) (Step 4d)
-  - **Predictions**:
-    - [Logistic Regression & Random Forest](output_files/lr_rf_predictions.csv) (Step 4a)
-    - [Neural Network](output_files/nn_predictions.csv) (Step 4b)
-    - [CatBoost](output_files/cb_predictions.csv) (Step 4c)
-  - **Preprocessed Data**: CSVs in `output_files/` (Steps 1–3d)
-- **Video Presentation**: [YouTube Link](#) (to be updated) – 10-minute presentation summarizing the problem, approach, and results.
+## Dataset Description
 
-### Results
-- **Best Model**: CatBoost achieved the highest performance (ROC-AUC: 0.88, Class 1 F1-score: 0.62).
-- **Key Predictors**: Age, NumOfProducts, Tenure, and Geography (especially Germany) are top drivers of churn.
+### Data Source
+The dataset used is the **Kaggle Bank Customer Churn Prediction dataset**, sourced from Kaggle ([link to dataset](https://www.kaggle.com/datasets/shubhammeshram579/bank-customer-churn-prediction)). This public dataset is cited as:
+- Meshram, S. (2023). Bank Customer Churn Prediction [Data set]. Kaggle. https://www.kaggle.com/datasets/shubhammeshram579/bank-customer-churn-prediction
 
-### How to Run
-1. **Environment**: Use Kaggle with GPU P100 enabled (Settings > Accelerator > GPU P100).
-2. **Install Dependencies**: Run `!pip install catboost shap` in the notebook.
-3. **Execute Notebook**: Run `Bank_Churn_Prediction_Final.ipynb` end-to-end to reproduce results.
-4. **View Outputs**: Plots and predictions are in the `output_files/` folder.
+### Data Characteristics
+- **Size**: The dataset contains 10,002 samples (rows) and 11 features (columns) initially, reduced to 10 features after dropping the irrelevant `RowNumber` column.
+- **Feature Types**: There are 8 numeric features (`CreditScore`, `Age`, `Tenure`, `Balance`, `NumOfProducts`, `HasCrCard`, `IsActiveMember`, `EstimatedSalary`) and 2 categorical features (`Geography`, `Gender`). The target variable, `Exited`, is a binary label (0 or 1).
+- **Key Features**:
+  - `CreditScore`: Numeric, customer’s credit score (range: ~350–850).
+  - `Geography`: Categorical, customer’s location (`France`, `Spain`, `Germany`).
+  - `Gender`: Categorical, customer’s gender (`Male`, `Female`).
+  - `Age`: Numeric, customer’s age (range: ~18–92).
+  - `Balance`: Numeric, account balance (range: 0–250,000).
+  - `NumOfProducts`: Numeric, number of bank products used (1–4).
+  - `Exited`: Binary target (0 = No Churn, 1 = Churn).
+- **Single Source**: The data is from a single tabulated CSV file, not multi-table or gathered from multiple sources.
 
-### Acknowledgments
-- Dataset provided by Shubham Meshram via Kaggle.
-- Built using Kaggle’s GPU P100 environment for model training.
+## Project Structure and Deliverables
+This project is presented in a single Jupyter Notebook, organized into clear sections: problem definition, exploratory data analysis (EDA), data preprocessing, model training, results, and conclusion. The notebook includes all code, visualizations, and markdown explanations. Additional deliverables include:
+- A **video presentation** (5–10 minutes, .mp4 format) summarizing the problem, approach, and results.
+- A **public GitHub repository** specific to this project, containing the notebook, output files (plots, predictions), and a README with instructions. The repository link will be added in Step 5: [GitHub Repository Link](https://github.com/aimlgpu/CSCA5622-Final-BankChurn) (to be updated).
+
+**Rubric Alignment**:
+- **Project Topic**: Clearly explains the project (churn prediction), type of learning (supervised), task (binary classification), importance (financial impact), and goal (model comparison and interpretability).
+- **Data**: Properly cites the Kaggle dataset with a link, describes data size (10,002 samples, 10 features), feature types (8 numeric, 2 categorical), key features, and confirms a single data source.
+- **Write-up**: Organized and clear, with logical sections for problem statement, dataset description, and project structure.
